@@ -25,7 +25,7 @@ Build a shell script to run in BASH
 #!/usr/bin/env bash
 cd /opt/doe
 java -jar DOE.jar 21	FALSE	TRUE	TRUE	100	200	100	0.1	0.5	100	3	0.2	100	20	0.2	3	3	0.05
-ls
+find . \(  -name "*.csv" \! -name inputs.csv -print0 \) | xargs -0 cat
 ```
 
 Write a Dockerfile (with no file extention). 
