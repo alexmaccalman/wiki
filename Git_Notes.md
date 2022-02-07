@@ -49,6 +49,21 @@ you will get a fatal becauwse it doesn't know where to push to. use this:
 `git push --set-upstream origin feature-readme_instructions`  
 then create a pull request. a request to have your code pulled into another branch  
 
+Go to the github website and create a pull request. Then merge when ready.  
+After merging, we can delete the branch.  
+`git branch -d feature-readme_instructions` 
+# managing merge conflicts 
+`git checkout -b quick-test`  
+
+to add a cmmit us the -am to add and put a commit message. only workd with modified files. If we do this with a new file we have to add or dtage it top let Git know about it.   
+`git commit -am "added world"`
+do a diff with the master
+`git diff master` or main  
+we will want to pull down lastest updates in master and merge locally. 
+then merge  
+`git merge main`  
+
+
 
 
 
