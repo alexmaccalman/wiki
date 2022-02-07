@@ -1,1 +1,2 @@
-## Git notes
+## Git notes  
+
