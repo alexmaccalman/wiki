@@ -70,15 +70,15 @@ in terminal is cat command to aggregate .md files
 cat 1-engagement-overview.md  2-customer-readiness.md  3-stakeholder-map.md  4-success-criteria.md  5-problem-statement.md 6-definition-of-done.md 7-constraints.md 8-proposed-architecture.md 9-machine-learning.md 10-leveraging-prior-work.md 11-engineering-fundamentals.md  12-customer-handoff.md  13-risks-and-issues.md  14-sharing-plan.md 15-proposed-delivery-schedule.md 16-team-members-and-roles.md 17-ready-to-start-checklist.md > ./gameplan.md  
 
 Steps to create a pdf
--Pip install grip  
+- Pip install grip  
 
--grip game-plan.md  
+- grip game-plan.md  
 
--Web site loads up.    
+- Web site loads up.    
 
--Load web site in browser  
+- Load web site in browser  
 
-Print to .pdf   
+- Print to .pdf   
 
 
 
