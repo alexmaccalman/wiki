@@ -62,7 +62,7 @@ stop a container
 ```
 docker stop contianer_name
 ```
-to remove container, to erify, use the ps -a command
+to remove container, to verify, use the ps -a command
 ```
 docker rm container_name
 ```
@@ -84,11 +84,15 @@ docker run container_name
 ```
 Run in the detacted mode to run in background mode and be able to use the prompt.  
 ```
-docker run =d container_name
+docker run -d container_name
 ```
 to attached back to the container. to get the id, only provide the firstr few characters  
 ```
 docker attach container_id
+```
+to log in to a container and get into bash shell, to exit enter extit
+```
+docker run -it contianer_name bash
 ```
 
 
