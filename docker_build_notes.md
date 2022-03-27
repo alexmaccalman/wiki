@@ -54,32 +54,41 @@ docker run --rm -t doe
 ## Basic Docker Commands
 
 list containers, -a lists all the running and stopped containers 
-```docker ps
+```
+docker ps
 docker ps -a
 ```
 stop a container
-```docker stop contianer_name
+```
+docker stop contianer_name
 ```
 to remove container, to erify, use the ps -a command
-```docker rm container_name
+```
+docker rm container_name
 ```
 to see a list of images
-``` docker images
+```
+docker images
 ```
 to remove an image
-``` docker rmi image_name
+```
+docker rmi image_name
 ```
 to download the image and not run it
-```docker run image_name
+```
+docker run image_name
 ```
 Run in attached mode, meaning you will be attached to the console or the standard out of the container. Won't be able to do anytthing unless we CTTRL+C to quit to get back to prompt.  
-``` docker run container_name
+``` 
+docker run container_name
 ```
 Run in the detacted mode to run in background mode and be able to use the prompt.  
-``` docker run =d container_name
+```
+docker run =d container_name
 ```
 to attached back to the container. to get the id, only provide the firstr few characters  
-``` docker attach container_id
+```
+docker attach container_id
 ```
 
 
