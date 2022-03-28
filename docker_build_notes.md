@@ -60,7 +60,7 @@ docker ps -a
 ```
 stop a container
 ```
-docker stop contianer_name
+docker stop contianer_name_or_container_id
 ```
 to remove container, to verify, use the ps -a command
 ```
@@ -93,6 +93,10 @@ docker attach container_id
 to log in to a container and get into bash shell, to exit enter extit
 ```
 docker run -it contianer_name bash
+```
+to pull a container, first looks locally if not there, looks to docker hub
+```
+docker pull image_name
 ```
 
 
