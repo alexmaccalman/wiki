@@ -98,6 +98,10 @@ to pull a container, first looks locally if not there, looks to docker hub
 ```bash
 docker pull image_name
 ```
+rin a docker container in detachted mode and name it
+```
+docker run -d --name assign_a_name image_name
+```
 
 
 
