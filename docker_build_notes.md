@@ -95,9 +95,11 @@ to log in to a container and get into bash shell, to exit enter extit
 docker run -it contianer_name bash
 ```
 to pull a container, first looks locally if not there, looks to docker hub
-```
+```bash
 docker pull image_name
 ```
+
+
 
 
 
