@@ -182,10 +182,10 @@ docker log container_name
 
 ## Docker Images  
 
-FROM is the start from a base OS or another image
-RUN installs all dependencies
-COPY copy files from local system on to the local image (usually the source code)
-ENTRYPOINT allows us to specify a command when container runs
+FROM is the start from a base OS or another image  
+RUN installs all dependencies  
+COPY copy files from local system on to the local image (usually the source code)  
+ENTRYPOINT allows us to specify a command when container runs  
 
 ```bash
 docker run -it ubuntu bash
