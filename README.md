@@ -131,6 +131,8 @@ $ find / -size +10M -exec command {} ’;’
 ## Linux man pages  
 https://man7.org/linux/man-pages/
 
+https://help.ubuntu.com/
+
 To list all pages on the topic, use -f option. To list all pages that discuss a specified topic (even if the specified subject is not present in the name), use the –k option.  
 
 man –f generates the same result as typing whatis.  
