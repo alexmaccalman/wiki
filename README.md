@@ -84,9 +84,9 @@ which will list all the files and directories with both zip and bin in their nam
 locate utilizes a database created by a related utility, updatedb. Most Linux systems run this automatically once a day. However, you can update it at any time by just running updatedb from the command line as the root user.
 
 ## Wildcards
-Wildcard	Result  
+
 ? 	Matches any single character  
-*	Matches any string of characters  
+/*	Matches any string of characters  
 [set]	Matches any character in the set of characters, for example [adf] will match any occurrence of a, d, or f  
 [!set]	Matches any character not in the set of characters    
 
