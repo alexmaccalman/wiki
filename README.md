@@ -128,6 +128,32 @@ For example, to find files greater than 10 MB in size and running a command on t
 
 $ find / -size +10M -exec command {} ’;’  
 
+## Linux man pages  
+https://man7.org/linux/man-pages/
+
+To list all pages on the topic, use -f option. To list all pages that discuss a specified topic (even if the specified subject is not present in the name), use the –k option.  
+
+man –f generates the same result as typing whatis.  
+man –k generates the same result as typing apropos.  
+
+With the -a parameter, man will display all pages with the given name in all chapters, one after the other, as in:
+
+$ man -a socket  
+
+## Info
+prvides information about something
+$ info make
+
+n	Go to the next node  
+p	Go to the previous node  
+u	Move one node up in the index  
+h   Help, list commands  
+q   Quits  
+
+## help  
+$ man --help  
+
+
 
 
 
