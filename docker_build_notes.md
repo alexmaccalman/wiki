@@ -470,6 +470,16 @@ to remove all the dangling mages we have localy use this command.
 docker image prune -a
 ```  
 
+| Task                                                                                           | Command Examples                                                                                                               |
+|------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| Connect to a docker-compose service by name                                                    | "docker compose run <service_name> /bin/bash“ (Most containers) “docker compose run <service_name> /bin/sh“(Alpine containers) |
+| List all running containers                                                                    | docker ps                                                                                                                      |
+| List ALL containers                                                                            | docker container ls -a                                                                                                         |
+| Kill all running containers                                                                    | docker kill ```docker ps -q```                                                                                                 |
+| Delete all containers                                                                          | docker rm -f ```docker ps -a -q```                                                                                             |
+| Delete all unused (dangling) images and those not referenced by a container without prompting. | docker image prune -a -f                                                                                                       |
+| Delete ALL images, used by a container or not, without prompting.                              | docker image rm -f *                                                                                                           |
+
 
 
 
