@@ -1,3 +1,6 @@
+Github repo with samples providing a starting point for how to integrate different services using a Compose file and to manage their deployment with Docker Compose.
+[awesome-compose](https://github.com/docker/awesome-compose)  
+
 # Notes on how to build a Docker from Power shell
 
 - Get in bios. At start up, press F1, F2, and F8.  
