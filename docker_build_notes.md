@@ -1,5 +1,10 @@
+[Docker Tutorial](https://docs.microsoft.com/en-us/visualstudio/docker/tutorials/docker-tutorial)  
+
 Github repo with samples providing a starting point for how to integrate different services using a Compose file and to manage their deployment with Docker Compose.
 [awesome-compose](https://github.com/docker/awesome-compose)  
+
+This Compose CLI tool makes it easy to run Docker containers and Docker Compose applications in the cloud.  
+[compose-cli](https://github.com/docker/compose-cli)  
 
 # Notes on how to build a Docker from Power shell
 
