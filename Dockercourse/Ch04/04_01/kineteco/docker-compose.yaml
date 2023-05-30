@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+  scheduler:
+    build: scheduler/.
+    ports:
+      - "81:80"
+    depends_on:
+      - database
+    profiles:
+      - scheduling_services
+  storefront: 
+    build: storefront/.
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - database
+    profiles:
+      - storefront_services
+  database: # will use default profile. We could specify a storefront_services and scheduling_services profile here if we wanted to profiles seperately
+    image: "mysql"
+    env_file:
+      - ./mysql/env_vars
+    volumes:
+      - ./mysql:/docker-entrypoint-initdb.d:ro
+      - kineteco:/var/lib/mysql
+volumes:
+  kineteco: 
+
+  # when we do docker-compose up, it will run only services that are in the default profile, in this case, the dataase service
+  # to run all; services that are part of the storefront_services profile ( including all default services), we would run the following:
+  # docker-compose --profile storefront_services up (also works with down, stop, restart)
+  
+

@@ -1,0 +1,7 @@
+version: "3.9"
+
+services: # list of services
+  storefront: # name of the service
+    build: . # path to the Dockerfile build locally
+  database: # name of the service
+    image: "mysql" # name of the image. Docker will pull it from Docker Hub automatically

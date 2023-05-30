@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  scheduler:
+    build: scheduler/.
+    ports:
+      - "81:80" # host port number : container port number
+  storefront: 
+    build: storefront/.
+    ports:
+      - "80:80" # from port 80 to port 80
+      - "443:443" # second prt exposes monitoring data to be collected
+  database: 
+    image: "mysql"
+    env_file:
+      - ./mysql/env_vars
+    volumes: # mount the sql scripts to the container
+      - ./mysql:/docker-entrypoint-initdb.d:ro # source:target:access mode ro = read only rw = read write
+      - kineteco:/var/lib/mysql # named volume:source path of the host machine to persist data
+volumes: # this provides persistent storage for the database with a name of my choosing
+  kineteco: # this is the name of the volume
+
+  # run docker-compose down --volumes to remove the named volume. IMPORTANT! you will run out of memory

@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  scheduler:
+    build: scheduler/.
+    ports:
+      - "81:80"
+    depends_on:
+      - database
+  storefront: 
+    build: storefront/.
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - database
+  database: 
+    image: "mysql:${TAG}" # the tag is set in the .env file. Environement variables are set in the host environment or in a .env file
+    env_file:
+      - ./mysql/env_vars
+    volumes:
+      - ./mysql:/docker-entrypoint-initdb.d:ro
+      - kineteco:/var/lib/mysql
+volumes:
+  kineteco: 
+
+  # environment variables are commonly used for image tags, softwrare versions, ports, or any part of the compose to make it more flexible
+
+# other ways to set the tag
+# the ? makes it mandatory to have an env variable
+ # database: 
+ #   image: "mysql:?Oops TAG is a required value
+
+ # database: 
+ #   image: "mysql"-latest"
+
+ 
+ # to specify location of .env file
+ # docker-compose --env-file /path/.env up

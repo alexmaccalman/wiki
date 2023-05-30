@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  scheduler:
+    build: scheduler/.
+    ports:
+      - "81:80"
+    depends_on:
+      - database
+  storefront: 
+    build: storefront/.
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - database
+  database: 
+    image: "mysql"
+    env_file:
+      - ./mysql/env_vars
+    volumes:
+      - ./mysql:/docker-entrypoint-initdb.d:ro
+      - kineteco:/var/lib/mysql
+volumes:
+  kineteco: 
+
+ # To use an override file, you can use the -f flag with docker-compose up. 
+ # These override files are useful for paramertizing your docker-compose.yml file.
+ # Like when we have different environments, like local, staging, and production.
+ # For example, to use the override file above, you would run: 
+ # docker-compose -f docker-compose.yml -f docker-compose.local.yml up

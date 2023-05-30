@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  storefront: 
+    build: 
+      context: . # needed to create build arguments needed for the dockerfile to buid from the current directory
+      args:
+        - region=us-east-1
+        - alice=0
+    environment: # environment variables for the storefront service inside the container
+      - runtime_env=dev
+  database: 
+    image: "mysql"
+    env_file: # environment variables for the mysql service inside the container, replace with env_file
+      - ./mysql/env_vars # this is the file that contains the environment variables for the mysql service
