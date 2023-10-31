@@ -19,6 +19,61 @@ The we can confirm that the VMs are on the same network by pinging withthis comm
 ``` bash
 ping <IP_address>
 ```
+Inslall SSH one each machine, allowing us to boot strap the commands by copy paste.  
+Update the distro, install nano for editing, net-tools to get network info, and openssh-server for ssh  
+```bash
+sudo apt-get update
+sudo apt-get install -y nano net-tools openssh-server
+sudo systemctl enable ssh
+```
+Now create a fire rule to allow port 22.  
+```bash
+sudo ufw allow ssh
+sudo systemctl start ssh
+```
+now we need the IP address for Rancher to access it. 
+```bash
+sudo ifconfig
+````
+
+
+
+## Install Docker on all machines with theses commands:  
+```bash
+curl -sSL https://get.docker.com/ | sh
+sudo usermod -aG docker $(whoami)
+sudo service docker start
+```
+For the fedora distro I had to use these commands
+```bash
+sudo systemctl start docker
+```
+
+## Installing Rancher
+
+[Rancher Instructions persistent Docker Install](https://ranchermanager.docs.rancher.com/v2.5/reference-guides/single-node-rancher-in-docker/advanced-options#persistent-data)  
+
+Run these docker commands on the VM that will have Rancher:
+```bash
+sudo docker run -d --restart=unless-stopped \
+  -p 80:80 -p 443:443 \
+  -v /opt/rancher:/var/lib/rancher \
+  --privileged \
+  rancher/rancher:latest
+```
+[Rancher instructions on how to login and create a cluster](https://ranchermanager.docs.rancher.com/v2.5/getting-started/quick-start-guides/deploy-rancher-manager/helm-cli)  
+
+Confirm the docker is running with sudo docker ps  
+Open a browser and go to https://localhost and follow the instructions. BE sure to include the sudo command:  
+sudo docker logs e04ddec2d222 2>&1 | grep "Bootstrap Password:" 
+Enter the password
+
+
+
+
+
+
+
 
 
 
