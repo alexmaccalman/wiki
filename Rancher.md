@@ -68,6 +68,13 @@ Open a browser and go to https://localhost and follow the instructions. BE sure 
 sudo docker logs e04ddec2d222 2>&1 | grep "Bootstrap Password:" 
 Enter the password
 
+The Rancher server needs to be reachable from all our virtual and physical hardware. Must set the server URL for other machies to see the rancher server.  
+Got to the Global Settings, scroll for Server URL and set the URL to the IP address where the rancher server is.   
+## Create a Cluster  
+In the home menu, click create and select Custom. Enter a cluster name, accept defaults, then press create.  
+We have to wait for registration. Click on the cluster and go to registration. Check the Insecure to skip TLS and copy the registration command.  Run that command in each linux VM. 
+
+
 
 
 
