@@ -2,12 +2,24 @@
 
 ## Create virtual machines  
 Find the desired linux distro here [DistroWatch](https://distrowatch.com/).  
-I tried using [Fedora](https://fedoraproject.org/coreos/), a minimal disto good for containers, but didn't get it to work.
+I tried using [Fedora](https://fedoraproject.org/coreos/), a minimal disto good for containers, but didn't get it to work.  
+Here is a Ubuntu iso download: [Ubuntu](https://releases.ubuntu.com/jammy/).  
 
 I used an Ubuntu LTS server instead. 
 
 In Vmware Workstation, create a new virtual machine.  
-Select Custon (advanced), use Workstation 17.x, install operating system later, select where to store the VM, 2 processors and 2 cores, select defaul amount of RAM, leave network type at NAT, leave LSI Logic and SATA as recommended, create a new virtual disk, bump up to 30 GB, and leave at split virutal disk file to make it easier to transfer the VM (slipt accross multiple files), hit next and finish.  
+- Select Custon (advanced), use Workstation 17.x,  
+- install operating system later,  
+- select where to store the VM,  
+- 2 processors and 2 cores,  
+- select defaul amount of RAM,  
+- leave network type at NAT,  
+- leave LSI Logic and SATA as recommended,  
+- create a new virtual disk,  
+- bump up to 30 GB,  
+- leave at split virutal disk file to make it easier to transfer the VM (slipt accross multiple files),  
+- hit next and finish.   
+
 Now go into CD.DVD (SATA) and browese where the iso file is. 
 
 The ubunut server would not boot becaUSE IT COMPLAINED ABOUT A MOUNTED ISO. To resolve this I had to create a empty iso withthe comand in bash and point the CD/DVD to is:  
