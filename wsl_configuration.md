@@ -11,10 +11,12 @@ to reslove DNS modif the reslv.conf file:
 sudo nano /etc/resolv.conf
 ```  
 Modify the file to have this:  
-nameserver 10.10.10.24  
-nameserver 10.10.10.25   
-nameserver 10.10.20.19  
-nameserver 10.10.20.20  
+nameserver <corporateDNS1>
+nameserver <corporateDNS2>
+
+To get <corporateDNS> addresses, use ipconfig /all from CMD or Powershell prompt, and check the details of the VPN adapter: 
+Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64, see the DNS server ips.   
+
 
 Then edit or create wsl config file:  
 ```
