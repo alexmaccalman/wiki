@@ -6,6 +6,9 @@ open powershell as admin and run this:
 ## connecting to the network from WSL while on the VPN
 Get-NetAdapter | Where-Object {$_.InterfaceDescription -Match "Cisco AnyConnect"} | Set-NetIPInterface -InterfaceMetric 6000  
 ```  
+[Follow these sets to get the values nneded to update the reslv.config file](https://jamespotz.github.io/blog/how-to-fix-wsl2-and-cisco-vpn)  
+
+
 to reslove DNS modif the reslv.conf file:  
 ```
 sudo nano /etc/resolv.conf
